@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+body { font-family:Arial, Helvetica, sans-serif; background:#f5f1e4; font-size:12px;width:700px;margin:0px auto 250px auto;}
+input, textarea {
+	width:400px;
+}
+.checkbox{ width:15px;}
+fieldset {
+	margin:0px; padding:0px; border:none}
+input#submit {
+	width:120px;
+	margin-left:120px;
+}
+label, .label {
+	display:block;
+	overflow:auto;
+	padding:0px;
+	margin:0px 0px 0px 0px;
+}
+.label label { display:inline}
+label span, .label span {
+	width:120px;
+	display:block;
+	float:left;
+}
+
+
+ol#admin {
+	display:block; clear:both;
+	overflow:auto;
+	margin-bottom:20px;
+}
+	ol#admin li {
+		display:inline-block;
+		padding:10px;
+	}
+.bienvenido {
+	border-bottom:1px solid #CCC;
+	border-top:1px solid #CCC;
+	padding:10px 0px 10px 0px;
+}
+.goBack {
+	display:block; float:right;
+}
+.itemAdmin {
+	margin-bottom:10px;
+	line-height:25px;
+	display:block;
+	padding:10px;
+	background-color:#FFF;
+	overflow:auto;
+}
+	.itemAdmin img.thumb { display:block; float:left; margin-right:5px; max-width:100%;}
+	.itemAdmin .thumbtxt { display:block; float:left;}
+		.itemAdmin .thumbtxt.columna { width:270px;}
+		.itemAdmin .thumbtxt .fecha { size:9px;}
+	.itemAdmin .titulo { font-weight:bold;}
+	.itemAdmin .descripcion { color:#666;}
+	
+	.opciones {
+		float:right;
+		margin-left:10px;
+	}
+
+ol {
+	padding:0px; margin:0px;
+	list-style:none;
+}
+a {
+	color:#900;
+	font-weight:bold; text-transform:uppercase; font-size:12px;
+	text-decoration:none;
+}
+#admin {
+	background-image:url(../include/img/layout/gridBackGris.png);
+}
+ol li.agBoton {
+	padding:5px;
+	display:inline-block;
+	list-style:none;
+}
+	ol li.agBoton img {
+		height:12px; margin-right:5px;
+	}
+	
+li.selected {}
+
+iframe { width:200px; height:150px;}
+
+fieldset { border-top:1px dotted #CCC}
+
+img.favimg { width:200px; height:auto;}

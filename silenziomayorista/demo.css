@@ -1,0 +1,21 @@
+#accordion {
+	margin-top:160px;
+	margin-left:25px;
+}
+
+h3.toggler {
+	cursor: pointer;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 0.6em;
+	padding-top:20px;
+	text-align:left;
+	letter-spacing:2px;
+	color:#FFFFFF;
+	font-weight:100;
+
+}
+
+div.element p, div.element h4 {
+	margin:0px;
+	padding:4px;
+}

@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body { background-color:#f0f0f0; text-align:center; margin:0px; padding:0px; background-image:url(../images/bg.jpg); background-repeat:repeat-x;}
+
+#central { margin:auto; width:820px; height:400px; margin-top:8%; background-color:#FFF; position:relative; overflow:auto; overflow-x:hidden; overflow-y:hidden;  }
+
+/* Usuario a la izquiera */
+
+	
+	#usuario { width:288px; height:376px; background-color:#000; top:12px; margin-left:12px; position:relative; float:left; background-image:url(../images/bg_black.jpg); background-repeat:no-repeat;  }
+	#ban_central { width:508px; background-color:#FFF; height:376px; top:12px; position:relative; float:left;  }
+	
+	/* Interior Logo */
+		
+	 	#login { width:288px; height:140px; background-color:transparent; margin-top:173px;  }
+		
+		p.texto1 { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; color:#FFF; font-size:0.7em; text-transform:uppercase; letter-spacing:1px; text-align:left; margin-left:20px; padding-top:20px; }
+		
+		.input1{ width:150px; height:19px; background-color:#FFF; border:1px #FFF solid; margin-bottom:7px; margin-left:20px; text-align:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0.8em; color:#666; padding-left:4px;  }
+		
+		.form1 { text-align:left;}
+		
+		.sub1 { background-color:#292929; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0.75em; padding-bottom:10px; color:#d6d6d6; width:68px; height:19px; border: 1px solid #292929;margin-left:20px;  }
+		
+		p.texto2 { font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; color:#CCC; font-size:0.5em; text-transform:uppercase; letter-spacing:1px; text-align:left; margin-left:20px; padding-top:20px; }
+		
+		
+		
+		
+		/*   H    O    M    E   */
+		
+		
+		
+		#superior { width:100%; height:105px; background-color:#000; text-align:center; }
+		#datara{ width:820px; height:105px; background-color:transparent; position:relative; margin:auto;  }
+		#central_home { margin:auto; width:820px; height:376px; margin-top:2%; background-color:#FFF; position:relative; }
+		
+		#img_home { position:relative; }
+		#menu_home { position:relative; float:left; }
+		
+		ul.menu1 { list-style:none; float:left; position:relative; margin-top:45px; }
+		li.item1 { display:inline; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0.7em; color:#FFF; text-transform:uppercase; padding-right:8px; padding-left:3px; border-right:1px #CCC solid; cursor:pointer;}
+		li.item1:hover { color:#666; }
+		
+		
+		#img_home_banner { padding-top:12px; }
+		
+		
+		/* Slide Show */
+		
+		#slide_home_con { width:820px; height:192px; background-color:#FFF; margin:auto;}
+		#slide_home { width:796px; height:180px; background-color:#FFF; margin:auto; overflow:auto; overflow-x:hidden; overflow-y:hidden;  }
+	
+		.banners { width:1592px; height:180px;}
+		.banner_a { width:198px; height:180px; background-color:transparent; margin:0; float:left; border-right:1px #000 solid;}
+		.banner_b { width:198px; height:180px; background-color:transparent; margin:0; float:left;}
+		.banner_c { width:193px; height:22px; background-color:#000; margin:0; float:left; margin-top:-27px; z-index:8; opacity:0.7; filter:alpha(opacity=70); font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0.8em; color:#FFF; text-align:left; padding-top:5px; padding-left:5px; cursor:pointer; }
+		
+		.banner_c:hover { width:193px; height:22px; background-color:#000; margin:0; float:left; margin-top:-27px; z-index:8; opacity:0.3; filter:alpha(opacity=30); font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0.8em; color:#FFF; text-align:left; padding-top:5px; padding-left:5px; cursor:pointer; }
+		
+	    #flechas { width:22px; height:21px; margin:0; float:left; background-color:transparent; z-index:30; margin-top:-100px; margin-left:795px; background-image:url(../images/btn.png); background-repeat:no-repeat; }
+		
+		
+		
+		/*  C  A  T  E  G  O  R  I  A  S  */
+		
+		#sub_cat { width:820px; height:132px; background-color:transparent; margin:auto; text-align:left; }
+		
+		.sub_tit { width:230px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:1.5em; color:#000; float:left; margin-top:55px; }
+		
+		ul.sub_c { list-style:none; float:left; margin-top:63px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0.9em; color:#666;}
+		
+		li.sub_c_li { display:inline; margin-right:25px; cursor:pointer; }
+		
+		li.sub_c_li:hover { color:#000;}
+		
+		
+		/* CATE */
+		
+		#item_cat { width:820px; margin:auto; height:auto;}
+		
+		ul.item_cat_ul { text-align:left; margin:0px; padding:0px;  }
+		
+		li.item_cat_li { width:265px; height:325px; background-color:#FFF; position:relative; float:left; margin-right:8px; text-align:left; margin-bottom:9px; list-style:none; cursor:pointer;}
+		
+		
+		.img_cat { width:246px; height:246px; margin-top:10px; margin-left:10px; }
+		
+		.info_cat { width:246px; height:65px; margin-left:10px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; color:#999; font-size:0.8em;}
+
+		
+		/*   A  M  P  L  I  A  D  A  */
+		
+		
+		#ampliada { width:820px; height:570px; background-color:#FFF; margin:auto;}
+		
+		.img_ampliada { width:550px; height:550px; float:left; margin-top:10px; margin-left:10px;}
+		
+		.info_ampliada { width:240px; height:550px; float:left; margin-left:10px; margin-top:10px; background-color:#FFF; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; color:#666; font-size:0.8em; text-align:left; }
+		
+		#close_amp { margin-right:10px; text-transform:uppercase; text-align:right; font-size:0.7em; letter-spacing:3px; }
+		#nom_amp { margin-left:20px; margin-top:60px;}
+		#art_amp { margin-left:20px; margin-top:20px;}
+		#talle_amp { margin-left:20px; margin-top:0px; line-height:24px;}
+		#color_amp { margin-left:20px; margin-top:20px;}
+		#material_amp { margin-left:20px; line-height:24px; }
+		
+		#colores_amp_diag { width:85px; height:55px;}
+		
+		
+		
+		
+		
+		
+		
+		/*  P  I  E  */
+		
+		#pie { width:820px; height:70px; margin:auto; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:0.6em; color:#666; text-transform:uppercase; text-align:left; letter-spacing: 1px; margin-top:30px;}

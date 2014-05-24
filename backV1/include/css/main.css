@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* CSS Document */
+.red {color:#F00}
+article, body, h1, h2, h3, p, ul, ul li, ol, ol li, img {margin:0px; padding:0px; overflow:auto; border:none;}
+ol, ul {list-style:none;}
+
+#player {display:block; position:absolute; top:80px; width:825px; text-align:left; margin:0px auto 0px auto; z-index:1000;}
+#pagina {}
+.boxShadow {-webkit-box-shadow: 0px 0px 3px 3px #CCC;-moz-box-shadow: 0px 0px 3px 3px #CCC;	box-shadow: 0px 0px 3px 3px #CCC;}
+#loading { display:block; margin:50px auto 0px auto}
+.kerningAmplio { letter-spacing:5px;}
+
+@font-face {
+    font-family: 'QuicksandBook';
+    src: url('../tipografia/Quicksand_Book-webfont.eot');
+    src: url('../tipografia/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../tipografia/Quicksand_Book-webfont.woff') format('woff'),
+         url('../tipografia/Quicksand_Book-webfont.ttf') format('truetype'),
+         url('../tipografia/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'QuicksandBoldOblique';
+    src: url('../tipografia/Quicksand_Bold_Oblique-webfont.eot');
+    src: url('../tipografia/Quicksand_Bold_Oblique-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../tipografia/Quicksand_Bold_Oblique-webfont.woff') format('woff'),
+         url('../tipografia/Quicksand_Bold_Oblique-webfont.ttf') format('truetype'),
+         url('../tipografia/Quicksand_Bold_Oblique-webfont.svg#QuicksandBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {font: 12px 'QuicksandBook', Arial, sans-serif; width:825px; margin:50px auto 0px auto;}
+a {color:#000; text-decoration:none}
+a:hover { color:#969}
+h1#logoSwitch { position:relative; height:33px; width:165px; margin:0px auto}
+h1#logoSwitch img { position: absolute; top:0px; left:0px;}
+
+#nav { overflow:visible; display:block; width:825px; margin:20px 0px 20px 0px;}
+#nav ol { padding-left:25px; margin-top:7px; width:800px; height:25px; overflow:visible; background-color:#EEE; position:relative; }
+#nav ol li { 
+	display:block; float:left; margin-right:20px;
+	line-height:38px; text-transform:uppercase; font-size:12px;
+	overflow:visible; position:relative; top:-5px;
+}
+
+#nav ol li a {padding-right:30px; height:38px; line-height:38px; display:block; overflow:visible}
+	#nav ol li.camp a:hover { background:url(../img/layout/menu/baso.png) right no-repeat; color:#ED407C}
+	#nav ol li.cole a:hover { background:url(../img/layout/menu/anteojos.png) right no-repeat; color:#F48223}
+	#nav ol li.look a:hover { background:url(../img/layout/menu/camara.png) right no-repeat; color:#EEE833}
+	#nav ol li.luks a:hover { background:url(../img/layout/menu/camarita.png) right no-repeat; color:#A3DCCC}
+	#nav ol li.prmo a:hover { background:url(../img/layout/menu/pina.png) right no-repeat; color:#A59ECC}
+	#nav ol li.mayo a:hover { background:url(../img/layout/menu/baso.png) right no-repeat; color:#59B9E8}
+	#nav ol li.loca a:hover { background:url(../img/layout/menu/palmera.png) right no-repeat; color:#EF4A22}
+
+#nav ol li.cont { position:absolute; top:-40px; right:0px; text-align:right; z-index:1200; text-align:right;}
+	#nav ol li.cont a { font-size:10px; padding-right:0px; display:inline;}
+		#nav ol li.cont a img { position:relative; bottom:-4px; margin-left:5px; height:18px;}
+
+#contenido { display:block; clear:both; margin:0px 0px 10px 0px; padding:5px; overflow:auto; left:-5px; position:relative; width:825px;}
+#footer { display:block; clear:both;}
+/* TICKER */
+#boxTicker {display:block; clear:both; position:relative;}
+	#box1, .colSep {margin-right:25px;}
+		.dosCol{ height:475px; overflow:hidden}
+	#boxTicker .dosCol { width:400px; display:block; float:left;}
+	.medio, .medioMedio, .medioMedioMedio { min-height:475px;}
+	.medio { width:400px;}
+	.medioMedio { width:245px;}
+	.medioMedioMedio { width:130px; overflow:hidden;}
+	.floatLeft { display:block; float:left;}
+	
+/* LOCALES */
+.locales h2, .looks h2, .promos h2 {
+	background-color:#0C9; text-align:center; text-transform:uppercase;
+	font-family:'QuicksandBoldOblique', Arial, sans-serif;font-size:55px;color:#FFF;
+	position:absolute; top:20px;
+	width:inherit;
+}
+#LImgChica { width:137px;}
+#LImgChica li { overflow:hidden; width:135px;margin:0px; padding:0px; display:block; cursor:pointer}
+#LImgChica img { margin:0px; padding:0px; border:none}
+
+
+.dos30, .pink {margin-top:120px;}
+.dos30 {width:230px; float:right; display:block;height:100%;font-size:15px;}
+	.dos30 li {padding:10px; cursor:pointer;}
+	.dos30 li.selected {font-family:'QuicksandBoldOblique', Arial, sans-serif;}
+	
+.pink {width:160px; float:right; display:block;padding-left:10px;font-size:14px;}
+	.pink p {margin-bottom:5px;	}
+#localSelect {background:url(../img/layout/locales/fondo.png) repeat-y left;}
+#localImg {width:100%;height:255px;overflow:hidden;}
+	#localImg img {	width:100%;}
+#gMap {margin:10px;float:right;width:260px;}
+	#gMap iframe { width:260px; height:200px;}
+#localMedia { position:relative; overflow:visible;}
+	#localMedia #mapas { overflow:hidden; height:475px;}
+	
+	#localMedia #mapas li {overflow:visible;}
+	
+	#localMedia #mapas li small{ 
+		height:30px; width:70px;
+		position:absolute; bottom:25px; left:15px; display:block;
+		
+		text-align:right !important;
+		font-size:12px !important;
+		
+		line-height:150%; 
+		background:url(../img/layout/menu/palmera.png) left no-repeat; 
+		
+		padding:20px 0px 0px 10px;
+	}
+		#localMedia #mapas li small a { color:#000 !important;}
+		
+		
+/* CONTACTO */
+#contactoFormHolder {background:#28DE9B;}
+	#contactoFormHolder h3 { background:url(../img/layout/contacto/hojotas.png) left no-repeat; padding:10px 10px 10px 50px; font-size:30px; margin:30px 0px 20px 50px;font-family:'QuicksandBoldOblique', Arial, sans-serif; color:#FFF;}
+	#contactoFormHolder #sendMail {}
+	#contactoFormHolder #sendMail label { display:block; clear:both; margin-bottom:5px; overflow:auto;}
+	#contactoFormHolder #sendMail label span { width:150px; display:block; float:left; text-align:right; font-weight:bold; color:#FFF; text-transform:uppercase; line-height:25px; margin-right:10px;}
+	#contactoFormHolder #sendMail .formFormat { display:block; float:left; border:none; height:18px; width:160px; padding-left:5px;}
+	#contactoFormHolder #sendMail textarea.formFormat {height:125px;}
+	#contactoFormHolder #sendMail input#submit { background:#FFF; border:none; color:#28DE9B; float:right; margin:10px 75px 0px 0px;padding:5px; text-transform:uppercase;}
+	#contactoFormHolder #sendMail fieldset { border:none; margin:0px; padding:0px;}
+
+
+/* LOOKS PROMOS LISTAS*/
+
+.looks div, .promos div {background:#EEE;}
+.looks .subtitulo, .promos .subtitulo {color:#0C9; margin:100px 0px 20px 0px; text-transform:uppercase; font-size:20px; text-align:center}
+.looks ol li, .promos ol#promos li {padding:0px 30px 0px 50px; margin:5px 0px 25px 10px; cursor:pointer}
+.looks ol li h3, .promos ol li h3 {color:#F07FB0; font-weight:normal; font-size:16px; text-transform:uppercase}
+
+
+.looks ol li {background:url(../img/layout/looks/bullet.png) no-repeat left top; }
+.promos ol li {background:url(../img/layout/menu/pina.png) no-repeat left top; }
+
+/* Lookbook */
+#megaWind {background:#28DE9B;padding:8px;}
+	#megaWindContainer{background:#FFF; padding:10px;}
+		#megaWindContenido{}
+		
+			/*Lista*/
+			#BIGThumbs, #SMAThumbs { position:relative;}
+				.camp .thumb {}
+			#smaList, #bigList {width:789px;position:relative; overflow:hidden;}
+			#bigList {height:250px; margin-bottom:20px;}
+				#bigList.camp {height:450px; margin-bottom:20px;}
+			#smaList {height:100px;}
+				#smaList ol li, #bigList ol li { display:block; float:left;}
+				#bigList ol li img{ margin:0px 3px 0px 3px; cursor:pointer}
+				#smaList ol li img{ margin:0px 1px 0px 1px; height:100px; cursor: pointer}
+			/*flechas*/
+			#bigList #prevBg, #bigList #nextBg, #smaList #prevSm, #smaList #nextSm{position:absolute; cursor:pointer}
+				#bigList #prevBg, #bigList #nextBg{ width:44px; height:61px; top:100px;}
+					#bigList #prevBg img , #bigList #nextBg img { width:44px; height:61px;}
+					
+					#bigList.camp #prevBg, #bigList.camp #nextBg {top:200px;}
+					
+				#smaList #prevSm, #smaList #nextSm{ width:22px; height:30px; top:35px;}
+					#smaList #prevSm img , #smaList #nextSm img { width:22px; height:30px;}
+					
+				#smaList #nextSm, #bigList #nextBg { right:0px;}
+					
+	/*texto foot mageWind*/				
+	#megaWindDesc {text-align:center;padding:15px 5px 5px 5px;}
+
+/* PROMOS */
+.selected {font-family:'QuicksandBoldOblique', Arial, sans-serif;}
+ #imgs li {}
+ 
+ /* Image Pan */
+ img#pannerHold {}
+#outer_container { position:fixed; top:0px; left:0px; z-index:1500; display:none; background:url(include/img/layout/loading.gif) center no-repeat #FFF;}
+#outer_container, #imagePan{ width:100%}
+#outer_container{}
+#imagePan{ position:relative; overflow:hidden; cursor: move;}
+	#imagePan img {height:auto; width:100%}
+#imagePan .container{position:relative; left:0;}
+	a#cerrarPan { display:block; font-size:12px; position:fixed; top:30px; right:30px; border:1px solid #CCC; background:#FFF; text-decoration:none; padding:5px;}
+		a#cerrarPan span { color:#999;}
+	#imagePan #info {font-size:12px; text-align:center; position:absolute; bottom:0px; min-height:40px; overflow:visible; width:420px;}
+		#imagePan #info #showhide { padding:10px; width:400px; background-color:#FFF;}
+		#imagePan #info #data {position:absolute; bottom:0px; display:none; background-color:#FFF; padding:10px; width:400px; cursor:text; text-align:left;}
+			#imagePan #info #data h3 { font-size:20px; font-weight:normal;line-height:150%; color:#666;}
+			#imagePan #info #data p { font-size:12px; line-height:150%; color:#666; font-weight:100;}
+			
+/* ETC */
+.hidden {zoom: 1; filter: alpha(opacity=0);	opacity: 0;}

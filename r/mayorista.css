@@ -1,0 +1,33 @@
+#MS_contenedor { width:100%; height:350px; display:block; overflow:hidden; position:relative; padding-top:30px;}
+#MS_contenedor #MS_nav { display:block; width:100%; position:absolute; top:0px; text-align:center}
+#MS_contenedor #MS_nav li { display:inline-block; margin:0px 10px; text-transform:uppercase;}
+#MS_contenedor #MS_lista { position:absolute; margin:20px 75px;}
+#MS_contenedor #MS_lista li{ display:block; float:left; margin:0px 1px; width:220px; position:relative;}
+#MS_contenedor #MS_lista li .MS_thumb { cursor:pointer;}
+#MS_contenedor #MS_lista li .MS_new { position:absolute; background:#FFF; display:block; top:10px; left:10px; height:50px; width:50px; border-radius:25px; line-height:50px; text-align:center;}
+#MS_contenedor #MS_lista li .MS_ago { position:absolute; background:#f5f1e4; display:block; top:10px; right:10px; height:50px; width:50px; border-radius:25px; line-height:50px; text-align:center; font-size:12px; letter-spacing:-1px;}
+#MS_contenedor #MS_lista li .MS_thumb_off { display:none;}
+#MS_contenedor #MS_lista li .MS_thum_desc { display:block; width: inherit;}
+#MS_contenedor #MS_lista li .MS_thum_desc .MS_h3 { font-size:20px; padding:5px 0px;}
+#MS_contenedor #MS_prev,
+#MS_contenedor #MS_next { display:block; position:absolute; top:165px; border:1px solid #ccc; cursor:pointer}
+#MS_contenedor #MS_prev { left:0px;}
+#MS_contenedor #MS_next { right:0px;}
+
+#MS_imagePan { display:none; position:fixed; top:0px; left:0px; height:100%; width:100%; background:#000}
+#MS_imagePan #MS_inagePan_img {}
+#MS_imagePan #MS_inagePan_img #MS_panImg { position:absolute; top:0px; left:0px; width:100%; height:auto;}
+#MS_imagePan #MS_info { width:30%; background:#FFF; position:fixed; bottom:0px; left:35%; right:35%;}
+#MS_imagePan #MS_showhide {
+	height:20px; width:150px; line-height:20px; cursor:pointer; text-align:center;
+	margin:20px auto; padding:5px 8px; position:absolute; bottom:0px; left:0; right:0; 
+	background:#FFF; border:1px solid #CCC;}
+#MS_imagePan #MS_data {
+	width:300px; display:none; line-height:30px;
+	margin:0 auto; padding:20px; position:absolute; bottom:0px; left:0; right:0;
+	background:#FFF;
+}
+#MS_imagePan #MS_data p { color:#666; display:block;}
+#MS_imagePan #MS_data p:first-child { font-size:20px;}
+#MS_imagePan #MS_cerrar { position:absolute; top:20px; right:30px; border:1px solid #CCC; background-color:#FFF; padding:3px 5px; height:20px; line-height:20px; text-transform:uppercase; text-align:center; width:60px}
+#MS_imagePan #MS_switchImg { position:fixed; top:70px; right:30px; width:60px !important; display:none; border:1px solid #CCC; background:#FFF; text-decoration:none; padding:5px;}

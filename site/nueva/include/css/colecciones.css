@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+body, h1, h3, p, ol, ol li, img {margin:0px; padding:0px; overflow:auto; border:none;}
+ol, ul {list-style:none;}
+
+@font-face {
+    font-family: 'QuicksandBook';
+    src: url('../tipografia/Quicksand_Book-webfont.eot');
+    src: url('../tipografia/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../tipografia/Quicksand_Book-webfont.woff') format('woff'),
+         url('../tipografia/Quicksand_Book-webfont.ttf') format('truetype'),
+         url('../tipografia/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'QuicksandLight';
+    src: url('../tipografia/Quicksand_Light-webfont.eot');
+    src: url('../tipografia/Quicksand_Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../tipografia/Quicksand_Light-webfont.woff') format('woff'),
+         url('../tipografia/Quicksand_Light-webfont.ttf') format('truetype'),
+         url('../tipografia/Quicksand_Light-webfont.svg#QuicksandLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {	font: 13px 'QuicksandBook', Arial, sans-serif;}
+a {color:#000; text-decoration:none}
+a:hover { color:#969}
+#player {display:block; position:fixed; top:25px; left:180px; width:825px; text-align:left; margin:0px auto 0px auto; z-index:1000;}
+#header {width:165px; position:fixed; left:60px; top:50px; overflow:visible;}
+#header h1#logoSwitch {height:33px; width:165px; margin-bottom:10px;}
+#header h1#logoSwitch img { position: absolute; top:0px; left:0px;}
+
+#header #nav { overflow: visible; display:block; position:relative; right:-30px;}
+#header #nav ol { overflow:visible;}
+#header #nav ol li { 
+	display:block;
+	text-transform:uppercase; font-size:12px; line-height:170%;
+	overflow:visible;
+	text-align:right;
+	height:25px;
+}
+
+#header #nav ol li a {padding-right:32px; line-height:38px; height:38px;display:block; overflow:visible;}
+	#header #nav ol li.camp a:hover { background:url(../img/layout/menu/baso.png) right no-repeat; color:#ED407C}
+	#header #nav ol li.cole a:hover { background:url(../img/layout/menu/anteojos.png) right no-repeat; color:#F48223}
+	#header #nav ol li.look a:hover { background:url(../img/layout/menu/camara.png) right no-repeat; color:#EEE833}
+	#header #nav ol li.luks a:hover { background:url(../img/layout/menu/camarita.png) right no-repeat; color:#A3DCCC}
+	#header #nav ol li.prmo a:hover { background:url(../img/layout/menu/pina.png) right no-repeat; color:#A59ECC}
+	#header #nav ol li.mayo a:hover { background:url(../img/layout/menu/baso.png) right no-repeat; color:#59B9E8}
+	#header #nav ol li.loca a:hover { background:url(../img/layout/menu/palmera.png) right no-repeat; color:#EF4A22}
+	#header #nav ol li.cont a:hover { background:url(../img/layout/menu/vaso.png) right no-repeat; color:#EF4A22}
+	
+	#header #nav ol li.cont { background:url(../img/layout/menu/vaso.png) right no-repeat; color:#EF4A22; height:auto; margin-top:35px;}
+	#header #nav ol li.cont #facebooklink, #header #nav ol li.cont #twiterlink  {display:none;}
+	
+	#linkContactoMenu { float:left; display:block; text-align:right; width:135px; position:relative; top:-55px;}
+
+#sec {position:absolute; top:40px; right:40px;}
+#sec ol {text-align:right;}
+#sec ol li {display:inline-block; text-transform:uppercase; margin-left:10px;}
+#sec ol li img { width:19px;}
+
+#contenido {}
+#contenido .intro {position:absolute;right:50px; top:15%;width:35%;font:23px 'QuicksandLight', Arial, sans-serif; text-align:right}
+	#contenido .intro h2 { display:inline;}
+#contenido div.holdCamp {display:none}
+	#contenido div.holdCamp.contCele {display:block}
+
+	/* overlaping */
+	#contenido .intro span, #contenido .intro h2, #header #nav ol li {background: url(../img/layout/menu/50TransBlanco.png);}
+
+#coleccionesList {position:fixed; bottom:0px; width:100%; background:url(../img/layout/menu/sombra30.png); padding:1% 0.5%}
+#coleccionesList ol {width:100%;}
+#coleccionesList ol li {display:block; float:left; width:24.75%; text-align:center; text-align:center;}
+#coleccionesList ol li a img{width:97%; cursor:pointer}
+#coleccionList li img { cursor:pointer}
+
+#videoback {position:absolute; top:-60px; right:120px;}
+#fiscal {position:fixed;bottom:160px;right:40px;}
+
+#lightbox {position:fixed; background:url(../img/layout/menu/sombra60.png); width:1000px; height:1000px; top:0px; left:0px; display:none; z-index:2500}
+#video { height:281px; width:500px; position:fixed}
+	#video iframe { border:none}
+	#cerrarVideo { float:right; position:relative; top:-314px;}
