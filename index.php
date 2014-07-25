@@ -106,7 +106,7 @@
 				current=c%n;
 				if(current<n-1){next=current+1;}else{next=0;}
 				
-				$(id + " .view .current").animate({width:0},1000,function(){
+				$(id + " .view .current").animate({width:0},5000,function(){
 					$(id + " .view .current").detach();
 					$(id + " .view div.next").attr("class","current").css('background-image', 'url(' + imgs[current] + ')');
 					$(id + " .view").append('<div class="next"></div>');
