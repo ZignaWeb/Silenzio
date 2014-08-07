@@ -13,23 +13,16 @@
 <body>
   
 <div id="mainBox" class="table">
-	<div class="row">
-    	<div id="header" class="cell">
-        	<div class="table">
-            	<div class="row">
-                	
-					<? 
-					include ("r/html/header.php");
-					include ("cp/r/sql.php");
-					$lq=mysql_query("SELECT * FROM `ag_media` WHERE `dep_table`='cmp' AND `dep_id`='1' AND `mostrar`='1' ORDER BY `id` ASC");
-					$i=0;
-					while ($ld[$i]=mysql_fetch_assoc($lq)) {$i++;}
-					array_pop($ld);
-					?>
-                    
-                </div>
-            </div>       
-        </div>
+	<div style="position:fixed; bottom:85px; height:45px; width:100%; z-index:9999; text-align:center; width:100%;"><img src="r/i/logodark.png" width="244" height="102" alt="Silenzio" /></div>
+    <div style="position:fixed; bottom:130px; height:45px; background-color:#F6F5EE; width:100%; z-index:9999;">
+        <? 
+        include ("r/html/newHeader.html");
+        include ("cp/r/sql.php");
+        $lq=mysql_query("SELECT * FROM `ag_media` WHERE `dep_table`='cmp' AND `dep_id`='1' AND `mostrar`='1' ORDER BY `id` ASC");
+        $i=0;
+        while ($ld[$i]=mysql_fetch_assoc($lq)) {$i++;}
+        array_pop($ld);
+        ?>      
     </div>
     <div class="row">
     	<div id="content" class="cell">
@@ -38,20 +31,6 @@
             </div>
         </div>
     </div>
-</div>
-|
-<div id="footSlide">
-	<h2>¡Favoritos de la semana!</h2>
-    <ol id="novedades">
-    	<?
-
-		$fq=mysql_query("SELECT * FROM `ag_favoritos` WHERE 1 ORDER BY `id` DESC LIMIT 3");
-		while($fd=mysql_fetch_assoc($fq)){
-			$fdi=mysql_fetch_assoc(mysql_query("SELECT * FROM `ag_media` WHERE `dep_table`='fav' AND `dep_id`='".$fd["id"]."'"));
-			echo "<li><img src='http://silenzio.com.ar/cp/uploads/box/".$fdi["url"]."' alt='".$fdi["titulo"]."' /></li>";
-		}
-        ?>
-    </ol>
 </div>
 
 <div id="videoplayer"></div>
