@@ -93,7 +93,6 @@
 			c++;
 			current=c%n;
 			if(current<n-1){next=current+1;}else{next=0;}
-			$("title").text("current:"+current+" next:"+next);
 			
 			$(id + " .view .current").animate({width:0},1000,function(){
 				$(this).detach();

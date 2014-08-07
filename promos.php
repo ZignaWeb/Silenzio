@@ -36,7 +36,7 @@
 			if ($ld[$i]["img"]==""){unset($ld[$i]);unset($img[$i]);}
 			if(count($ld)==0){
 				$ld[0]["img"]="url1392923925.jpeg";
-				$ld[0]["titulo"]="Nos hay promociones por el momento";
+				$ld[0]["titulo"]="No hay promociones por el momento";
 			}
 			?>
         	<div id="madiaHold" class="table">
@@ -56,7 +56,7 @@
 					if ($j%2==0){echo '<div class="row">
 					';}
 					if ($j==0) {$on="on";}else{$on="";}
-					echo '<div class="cell promo '.$on.'" data-img="'.$img[$j].'"><h2>'.$ld[$j]["titulo"].'</h2><p>'.$ld[$j]["descripcion"].'</p><p class="fechas">Desde el '.date("d/m/y", strtotime($ld[$j]["inicio"])).' al '.date("d/m/y", strtotime($ld[$j]["fin"])).'</p></div>';
+					echo '<div class="cell promo '.$on.'" data-img="'.$ld[$j]["img"].'"><h2>'.$ld[$j]["titulo"].'</h2><p>'.$ld[$j]["descripcion"].'</p><p class="fechas">Desde el '.date("d/m/y", strtotime($ld[$j]["inicio"])).' al '.date("d/m/y", strtotime($ld[$j]["fin"])).'</p></div>';
 					if ($j%2==1){echo '</div>
 					';}
 				}

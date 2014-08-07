@@ -26,39 +26,45 @@
         	<?
 			$dbh = mysql_connect ("MYSQL.silenzio.com.ar", "silenzio", "silen123") or die ('I cannot connect to the database because: ' . mysql_error()); mysql_select_db ("web");
 			
-			$cq=mysql_query("SELECT categoria.nombre, categoria.categoriaid FROM `categoria`,`prenda` WHERE categoria.categoriaid=prenda.categoria GROUP BY categoria ORDER BY categoria.nombre ASC");
+			$cq=mysql_query("SELECT `ag_categoria`.`nombre`, `ag_categoria`.`id` FROM `ag_categoria`,`ag_prenda` WHERE `ag_categoria`.`id`=`ag_prenda`.`categoria` GROUP BY `ag_prenda`.`categoria` ORDER BY `ag_categoria`.`nombre` ASC");
 
 $cn=mysql_num_rows($cq);
 			$j=0;
 			while($cd[$j]=mysql_fetch_assoc($cq)){$j++;}
 			unset($cd[$j]);
 			
-			if ($_GET["c"]!="" && $_GET["c"]!=0){
+			if (isset($_GET["c"]) && $_GET["c"]!="" && $_GET["c"]!=0){
 				$c=strip_tags($_GET["c"]);
 			}else{
-				
-				$c=$cd[0]['categoriaid'];
-				
+				$c=$cd[0]['id'];
 			}
-			$pq=mysql_query("SELECT * FROM `prenda` WHERE `categoria`='$c'");
+			$pq=mysql_query("SELECT * FROM `ag_prenda` WHERE `categoria`='$c'");
 			$j=0;
-			while($pd[$j]=mysql_fetch_assoc($pq)){$j++;}
+			while($pd[$j]=mysql_fetch_assoc($pq)){
+				$g2t="SELECT `url` FROM `ag_media` WHERE `dep_table`='prenda' AND `dep_id`='".$pd[$j]["id"]."'"; 
+				// echo "<p>$g2t</p>";
+				$q2=mysql_query($g2t);
+				$imgCount=1;
+				while ($imgPull=mysql_fetch_assoc($q2)) {
+					$pd[$j]["img".$imgCount]=$imgPull["url"];
+					$imgCount++;
+				}
+				$j++;
+			}
 			unset($pd[$j]);
-			
 			?>
        <ol id="MS_nav">
                     <?
 					 foreach ($cd as $valor ){ 
-					 	if ($c==$valor['categoriaid']){
+					 	if ($c==$valor['id']){
 							
 							$style= 'font-family:italic';		
 						}else{
 							$style=NULL;		
 						}
-						echo '<li style="'.$style.'" id="men'.str_replace(" ","_",$valor["nombre"]).'"><a href="mayoristas.php?c='.$valor['categoriaid'].'">'.($valor['nombre']).'</a></li>';
+						echo '<li style="'.$style.'" id="men'.str_replace(" ","_",$valor["nombre"]).'"><a href="mayoristas.php?c='.$valor['id'].'">'.($valor['nombre']).'</a></li>';
 						
-					}
-										
+					}		
 					?>
                 </ol>
         	
@@ -71,14 +77,12 @@ $cn=mysql_num_rows($cq);
                     <p><?=$pd[0]["color"]?></p>
                 </div>
             </div>
-
         	<!--<div class="largePic" style="background:url('r/i/imgPre/PROXIMAMENTE.png') #ccc; background-position:center; background-size:cover;"></div>-->
-            
             <div class="largePic">
-            	<img class="MS_big_box" src="http://silenzio.com.ar/nueva/include/img/content/box/<?=$pd[0]["img"].'" alt="'.$pd[0]["nombre"].'"  title="'.$pd[0]["nombre"]?>"/><div class="MS_big_float_cont">
+            	<img class="MS_big_box" src="http://silenzio.com.ar/cp/uploads/box/<?=$pd[0]["img1"]?>" alt="<?=$pd[0]["nombre"]?>"  title="<?=$pd[0]["nombre"]?>"/><div class="MS_big_float_cont">
                 <? 
 				if ($pd[0]["img2"]!=""){
-					echo '<img class="MS_big_float" src="http://silenzio.com.ar/nueva/include/img/content/box/'.$pd[0]["img2"].'" alt="'.$pd[0]["nombre"].'"  title="'.$pd[0]["nombre"].'"/>';
+					echo '<img class="MS_big_float" src="http://silenzio.com.ar/cp/uploads/boxSM/'.$pd[0]["img2"].'" alt="'.$pd[0]["nombre"].'"  title="'.$pd[0]["nombre"].'"/>';
 				}
 				?>
                 </div>
@@ -90,16 +94,16 @@ $cn=mysql_num_rows($cq);
 
 					echo '<li class="litaItem">';
 					
-					if ($d["new"] == 1 ) {
+					if ($d["nuevo"] == 1 ) {
 						echo '<div class="MS_new">NEW!</div>';
 					}
 					if ($d["agotado"] == 1 ) {
 						echo '<div class="MS_ago">agotado!</div>';
 					}
 					if ($d["img2"] != "" ) {
-						echo '<img class="MS_img2" src="http://silenzio.com.ar/nueva/include/img/content/box/'.$d["img2"].'" alt="'.$d["talle"].' - '.$d["color"].'"  title="'.$d["nombre"].'" />';
+						echo '<img class="MS_img2" src="http://silenzio.com.ar/cp/uploads/boxSM/'.$d["img2"].'" alt="'.$d["talle"].' - '.$d["color"].'"  title="'.$d["nombre"].'" />';
 					}
-					echo '<img class="MS_img1" src="http://silenzio.com.ar/nueva/include/img/content/box/'.$d["img"].'" alt="'.$d["talle"].' - '.$d["color"].'"  title="'.$d["nombre"].'" />';
+					echo '<img class="MS_img1" src="http://silenzio.com.ar/cp/uploads/boxSM/'.$d["img1"].'" alt="'.$d["talle"].' - '.$d["color"].'"  title="'.$d["nombre"].'" />';
 					echo '</li>'; 
 					$r++;					
 				}
@@ -118,10 +122,10 @@ $(document).ready(function(){
 			
 		if ($(this).hasClass("MS_img2")){
 			var img2=$(this).siblings(".MS_img1").attr("src");
-			$(".largePic .MS_big_float_cont").html('<img class="MS_big_float" src="'+img1+'" alt="'+des+'"  title="'+tit+'"/>');
-			$(".largePic img.MS_big_box").attr("src",img2);
+			$(".largePic .MS_big_float_cont").html('<img class="MS_big_float" src="'+img1.replace("/box/","/boxSM/")+'" alt="'+des+'"  title="'+tit+'"/>');
+			$(".largePic img.MS_big_box").attr("src",img2.replace("/boxSM/","/box/"));
 		}else{
-			$(".largePic img.MS_big_box").attr("src",img1);
+			$(".largePic img.MS_big_box").attr("src",img1.replace("/boxSM/","/box/"));
 			$(".largePic .MS_big_float_cont").html("");
 		}
 		
@@ -134,8 +138,8 @@ $(document).ready(function(){
 		var img1=$(".largePic img.MS_big_float").attr("src");
 		var img2=$(".largePic img.MS_big_box").attr("src");
 		
-		$(".largePic img.MS_big_float").attr("src",img2);
-		$(".largePic img.MS_big_box").attr("src",img1);
+		$(".largePic img.MS_big_float").attr("src",img2.replace("/box/","/boxSM/"));
+		$(".largePic img.MS_big_box").attr("src",img1.replace("/boxSM/","/box/"));
 
 	});
 	
