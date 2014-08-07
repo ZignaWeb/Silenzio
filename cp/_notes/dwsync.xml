@@ -24,4 +24,16 @@
 <file name="logincheck.php" server="ftp.silenzio.com.ar/wwwroot/" local="130373265656708000" remote="130373265600000000" Dst="0" />
 <file name="logout.php" server="ftp.silenzio.com.ar/wwwroot/" local="130372262920530000" remote="130373123400000000" Dst="0" />
 <file name="setup.php" server="ftp.silenzio.com.ar/wwwroot/" local="130372491421796000" remote="130373124600000000" Dst="0" />
+<file name="cargar.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837570184000" remote="130519096200000000" Dst="0" />
+<file name="export.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837570264000" remote="130519096200000000" Dst="0" />
+<file name="editar.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837570254000" remote="130519096200000000" Dst="0" />
+<file name="export2.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837570314000" remote="130519096200000000" Dst="0" />
+<file name="delete.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837570194000" remote="130519096200000000" Dst="0" />
+<file name="home.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837570354000" remote="130519096200000000" Dst="0" />
+<file name="index.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837570394000" remote="130519096200000000" Dst="0" />
+<file name="listar.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837570464000" remote="130519096200000000" Dst="0" />
+<file name="login.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837570484000" remote="130519096200000000" Dst="0" />
+<file name="logincheck.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837570524000" remote="130519096200000000" Dst="0" />
+<file name="logout.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837570544000" remote="130519096200000000" Dst="0" />
+<file name="setup.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130457837577764000" remote="130519097400000000" Dst="0" />
 </dwsync>
