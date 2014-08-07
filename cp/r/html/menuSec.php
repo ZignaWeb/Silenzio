@@ -1,5 +1,4 @@
-<? 
-if ($embed!=1 || !isset($embed)) { 
+<? if ($embed!=1 || !isset($embed)) { 
 	header("Location:./");
 }else{
 	$q = htmlentities($_GET["q"]);
@@ -18,8 +17,7 @@ if ($embed!=1 || !isset($embed)) {
 if ($a!="")
 {
 	if ($secciones[$q]["a"][$a]["p"]>$_SESSION["mypermisos"]) {
-		echo " <hr> <div class='alert-box warning'>".$error[$lang]["notenoughpermits"]."
-		".$secciones[$q]["a"][$a]["p"]."<=".$_SESSION["mypermisos"]."<a href='#' class='close'>&times;</a></div>
+		echo "<hr /><p class='column small-12'>".$error["notenoughpermits"]."</p></div>
 		<script type='text/javascript' src='r/js/foundation.min.js'></script>
 		<script>
 			$(document).foundation();

@@ -15,7 +15,6 @@ $inline["es"]["media"]="Media";
 // headers
 $inline["es"]["viendo"]="Viendo: ";
 $inline["es"]["permisos"]="Acciones Disponibles";
-$inline["es"]["permisosBajadas"]="Eres moderador nivel [:x:], estas son las acciones que están habilitadas para tu cuenta:";
 $inline["es"]["eliminado"]="Eliminado";
 $inline["es"]["editado"]="Editado";
 $inline["es"]["Bienvenido"]="Bienvenido";
@@ -50,9 +49,6 @@ $inline["es"]["Show"]="Mostrar";
 $inline["es"]["NoShow"]="No Mostrar";
 $inline["es"]["private"]="Privado";
 $inline["es"]["links"]="Enlaces";
-$inline["es"]["default"]="Por defecto";
-$inline["es"]["Yes"]="Si";
-$inline["es"]["No"]="No";
 
 // resultados busqueda
 $inline["es"]["results"]="Resultados";

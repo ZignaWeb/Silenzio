@@ -10,12 +10,10 @@ $inline["en"]["download"]="Download file";
 $inline["en"]["Search"]="Search";
 $inline["en"]["pages"]="Pages";
 $str["en"]["upfoto"]="Add media"; // boton post crear elemento
-$inline["en"]["media"]="Media";
 
 // headers
 $inline["en"]["viendo"]="Listing: ";
 $inline["en"]["permisos"]="Allowed actions";
-$inline["en"]["permisosBajadas"]="You are a moderator level [:x:] in this system, these are the actions that your level authorize you t perform:";
 $inline["en"]["eliminado"]="Deleted";
 $inline["en"]["editado"]="Edited";
 $inline["en"]["Bienvenido"]="Welcome";
@@ -51,9 +49,6 @@ $inline["en"]["Show"]="Show";
 $inline["en"]["NoShow"]="Don't Show";
 $inline["en"]["private"]="Private";
 $inline["en"]["links"]="Links";
-$inline["en"]["default"]="Default";
-$inline["en"]["Yes"]="Yes";
-$inline["en"]["No"]="No";
 
 // resultados busqueda
 $inline["en"]["results"]="results";
@@ -68,7 +63,6 @@ $inline["en"]["his"]="Log";
 $inline["en"]["setup"]="Setup";
 $inline["en"]["salir"]="Log-out";
 $inline["en"]["goback"]="Go back";
-$inline["en"]["cp"]="Control Panel";
 
 // contexturales
 $str["en"]["cargado"]="Element added to: "; 			// texto on seccess submit formulario cargar

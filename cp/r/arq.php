@@ -34,7 +34,6 @@ $secciones=array(
 	"med" => array (
 		"db" => "ag_media",
 		"t" => $inline[$lang]["media"],
-		"l" => 1,
 		"p" => 1,
 		"a" => array (
 			"listar" => array ( "db" => "listar", "menu" => "menu", "t" =>$inline[$lang]["listar"], "p" => 1),
@@ -59,7 +58,6 @@ $secciones=array(
 	"cmp" => array (
 		"db" => "ag_campania",
 		"t" => "Campañas",
-		"l" => 0,
 		"p" => 1,
 		"a" => array (
 			"listar" => array ( "db" => "listar", "menu" => "menu", "t" =>$inline[$lang]["listar"], "p" => 1),
@@ -86,7 +84,6 @@ $secciones=array(
 	"cat" => array (
 		"db" => "ag_categoria",
 		"t" => "Categorías",
-		"l" => 1,
 		"p" => 1,
 		"a" => array ( 
 			"listar" => array ( "db" => "listar", "menu" => "menu", "t" =>$inline[$lang]["listar"], "p" => 1),
@@ -106,7 +103,6 @@ $secciones=array(
 	"ciu" => array (
 		"db" => "ag_ciudad",
 		"t" => "Ciudad",
-		"l" => 1,
 		"p" => 1,
 		"a" => array ( 
 			"listar" => array ( "db" => "listar", "menu" => "menu", "t" =>$inline[$lang]["listar"], "p" => 1),
@@ -126,7 +122,6 @@ $secciones=array(
 	"fav" => array (
 		"db" => "ag_favoritos",
 		"t" => "Favoritos",
-		"l" => 0,
 		"p" => 1,
 		"a" => array ( 
 			"listar" => array ( "db" => "listar", "menu" => "menu", "t" =>$inline[$lang]["listar"], "p" => 1),
@@ -154,7 +149,6 @@ $secciones=array(
 	"loc" => array (
 		"db" => "ag_local",
 		"t" => "Locales",
-		"l" => 0,
 		"p" => 1,
 		"a" => array (
 			"listar" => array ( "db" => "listar", "menu" => "menu", "t" =>$inline[$lang]["listar"], "p" => 1),
@@ -175,7 +169,7 @@ $secciones=array(
 						"box"   => array ( "w" => 800, "h" => 350),
 					)
 				),
-			"googleMaps"  => array( "db" => "googleMaps", "t" => "Google Maps", "type" => "textarea", "val" => "text", "rtf" => "no", "hide" => 1, "force" => 1, "search" => 0),
+			"googleMaps"  => array( "db" => "googleMaps", "t" => "Google Maps", "type" => "textarea", "val" => "text", "rtf" => "no", "hide" => 2, "force" => 1, "search" => 0),
 			"mostrar" => array ( "db" => "mostrar", "t" => $inline[$lang]["visibility"], "type" => "select", "val" => "number", 
 					  "options" => array (1 => $inline[$lang]["Show"], 0 => $inline[$lang]["NoShow"])
 					)
@@ -251,6 +245,8 @@ $secciones=array(
 		),
 		"c" => array (
 			"nombre"  => array( "db" => "nombre", "t" => "Nombre", "type" => "input", "val" => "varchar", "force" => 1, "search" => 1),
+			"codigo"  => array( "db" => "codigo", "t" => "Código", "type" => "input", "val" => "varchar", "search" => 1),
+			"descripcion"  => array( "db" => "descripcion", "t" => "Descripcion", "type" => "textarea", "rtf" => "no", "val" => "varchar", "force" => 1, "search" => 1),
 			"talle"  => array( "db" => "talle", "t" => "Talle", "type" => "input", "val" => "varchar", "search" => 1),
 			"color"  => array( "db" => "color", "t" => "Color", "type" => "input", "val" => "varchar", "search" => 1),
 			"categoria"  => array( "db" => "categoria", "t" => "Categoria", "type" => "drop", "get"=>"cat", "val" => "varchar", "search" => 1),

@@ -23,17 +23,17 @@
 				$titulo=$val["t"];
 				$palceholder=$titulo;
 				
-				if (isset($val["hide"]) && $val["hide"]>1) {$hidden=" style='display:none'";}else{$hidden="";}
-				if (isset($val["force"]) && $val["force"]==1) {$clase=" force";$char="<span class='asterisco'>*</span>";}else{$clase=""; $char="";}
+				if ($val["hide"]>1) {$hidden=" style='display:none'";}else{$hidden="";}
+				if ($val["force"]==1) {$clase=" force";$char="<span class='asterisco'>*</span>";}else{$clase=""; $char="";}
 				if ($val["val"]=="date"){
 					$clase.=" date";
-					$titulo.=" <span style='font-size:12px'>$fDateTxt</span>";
+					$titulo.=" <span style='font-size:12px'>YYYY-MM-DD</span>";
 					}else{
 					$clasetime="";
 				}
 				if ($val["val"]=="datetime"){
 					$clase.=" datetime";
-					$titulo.=" <span style='font-size:12px'>$fDateTimeTxt</span>";
+					$titulo.=" <span style='font-size:12px'>YYYY-MM-DD HH:MM:SS</span>";
 					}else{
 					$clasetime="";
 				}
@@ -50,7 +50,7 @@
 				
 				if (!isset($val["dependency"])) {
 				
-				if (isset($val["force"]) && $val["force"]==1) {$clase=" force";$char="<span class='asterisco'>*</span>";}else{$clase=""; $char="";}
+				if ($val["force"]==1) {$clase=" force";$char="<span class='asterisco'>*</span>";}else{$clase=""; $char="";}
 				
 				$valor=$d[$val["db"]];
 				
@@ -60,20 +60,18 @@
 					echo "<input class='$clase' type='password' placeholder='".$palceholder."' name='".$val["db"]."' value='$valor'/>";
 				}elseif ($val["type"]=="textarea"){
 					echo "<div class='rtfbox' id='".$val["db"]."'>";
-					if (!isset($val["rtf"]) || $val["rtf"] != "no") {
 						include ("r/html/rtfbuttons.php");
-					}
 					echo "<textarea class='$clase' rows='5' placeholder='".$palceholder."' name='".$val["db"]."'>$valor</textarea>
 						<script type='text/javascript'>richTextualize('#".$val["db"]."');</script>
 					</div>";
 				}elseif ($val["type"]=="img"){
-					echo "<img class='th $clase' src='".$dir["imgs"]."/thumb/$valor'><input placeholder='".$palceholder."' name='".$val["db"]."' type='file' />";
+					echo "<img class='th small-12 $clase' src='./data/uploads/box/$valor'><input placeholder='".$palceholder."' name='".$val["db"]."' type='file' />";
 				}elseif($val["type"]=="drop"){
 					$tabla=$secciones[$val["get"]]["db"];
 					$key=key($secciones[$val["get"]]["c"]);
 					$field=$secciones[$val["get"]]["c"][$key]["db"];
 					
-					echo "<select class='$clase' name='".$val["db"]."'><option value=' '>".$inline[$lang]["sindefinir"]."</option>";
+					echo "<select class='$clase' name='".$val["db"]."'><option value=' '>".$inline["sindefinir"]."</option>";
 					$gq=mysql_query("SELECT * FROM `$tabla` WHERE 1 ORDER BY `$field` ASC");
 					while ($gd=mysql_fetch_assoc($gq)){
 						if ($gd["id"]==$valor) {$selected="selected='selected'";}else{$selected="";}
@@ -98,40 +96,34 @@
 			?>
             </div>
             <?
-			if (isset($dep) && $secciones["med"]["a"]["listar"]["p"]<=$_SESSION["mypermisos"]) {
+			if (isset($dep)) {
 				echo "<h3>".$inline[$lang]["medias"]."</h3><hr/><div class='galleryAdmin'>";
 				$i=0;
 				// lista de elementos cargados
 				$mq = mysql_query( "SELECT * 
-									FROM `ag_media` 
+									FROM `media` 
 									WHERE `dep_table`='".$dep["tabla"]."' AND `dep_id`='".$dep["id"]."'");
 				while ($md = mysql_fetch_assoc($mq)) {
 					$i++;
 					if ($md["type"]=="img") {
-						$media=$dir["imgs"]."/thumb/".$md["url"];
+						$media="data/uploads/thumb/".$md["url"];
 					}else{
 						$media="http://placehold.it/200x200&text=".$md["type"];
 					}
-					$botonesAdmin = "<ul class='button-group'>";
-					if ($secciones["med"]["a"]["delete"]["p"]<=$_SESSION["mypermisos"]) {
-						$botonesAdmin .= "<li><a title='".$inline[$lang]["delete"]."' href='?q=med&a=delete&i=".$md["id"]."' class='small-6 medium-6 large-6  button alert eliminarelemeto tiny'><span>&nbsp;</span></a></li>";
-					}
-					if ($secciones["med"]["a"]["editar"]["p"]<=$_SESSION["mypermisos"]) {
-						$botonesAdmin .="<li><a title='".$inline[$lang]["editar"]."' href='?q=med&a=editar&i=".$md["id"]."' class='edit small-6 medium-6 large-6 button tiny'><span>&nbsp;</span></a></li>";
-					$botonesAdmin .="</ul>";
-					}
+					
 					echo "<div class='small-6 medium-4 large-3 column mediaItem'>
 						<div class='imgHold' style='background:url($media) center; background-size:auto'></div>
-						$botonesAdmin
+						<ul class='button-group'>
+							<li><a title='".$inline["delete"]."' href='?q=med&a=delete&i=".$md["id"]."' class='small-6 medium-6 large-6  button alert eliminarelemeto tiny'><span>&nbsp;</span></a></li>
+							<li><a title='".$inline["editar"]."' href='?q=med&a=editar&i=".$md["id"]."' class='edit small-6 medium-6 large-6 button tiny'><span>&nbsp;</span></a></li>
+						</ul>
 					</div>";
 				}
 				if ($i==0) {
 					echo "<p>".str_replace("[:x:]","media",$inlint[$lang]["noresults"])."</p>";
 				}
 				// boton apra cargar dependencias
-				if ($secciones["med"]["a"]["cargar"]["p"]<=$_SESSION["mypermisos"]) {
 				echo '<a class="button small-12 secondary tiny" style="margin-top:20px;" href="?q=med&a=cargar&dep_table='.$dep["tabla"].'&dep_id='.$dep["id"].'">'.$str[$lang]["upfoto"].'</a>';
-				}
 			}
 			?>
 			<hr />
@@ -152,7 +144,7 @@
 			if ($val["val"]!="date") {
 				$postv = $_POST[$val["db"]];
 			}else{
-				$postv = date($fDateTime, strtotime(str_replace('-', '/', $_POST[$val["db"]])));
+				$postv = date('Y-n-j H:i:s', strtotime(str_replace('-', '/', $_POST[$val["db"]])));
 			}
 			
 			if ($postv!="" && $val["val"]!="file") {
@@ -175,7 +167,7 @@
 			echo $e;
 		}else{
 			if (mysql_query($q)){
-				echo $inline[$lang]["editado"].": ".ucfirst($secciones[$_GET["q"]]["t"]);
+				echo $inline["editado"].": ".ucfirst($secciones[$_GET["q"]]["t"]);
 				logIntoHistory($ahora,$_SESSION["myuserid"],$inline[$lang]["editar"].": ".$secciones[$_GET["q"]]["t"],$q);
 				// time / quien / accion / codigo
 			}else{

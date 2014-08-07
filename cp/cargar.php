@@ -92,7 +92,7 @@
 			}elseif($val["val"]=="file"){
 				array_push($imgs,$val["db"]);
 				array_push($size,$secciones[$_GET["dep_table"]]["c"]["img"]["imgsizes"]);
-			}elseif($postv=="" && (isset($val["force"]) && $val["force"]==1)){
+			}elseif($postv=="" && $val["force"]==1){
 				$e.= str_replace("[:x:]",$val["t"],$error[$lang]["oneobli"]);
 			}
 			
@@ -113,7 +113,7 @@
 				logIntoHistory($ahora,$_SESSION["myuserid"],$str[$lang]["crear"].$secciones[$_GET["q"]]["t"],$q);
 				// time / quien / accion / codigo
 			}else{
-				echo $str[$lang]["nocargado"].ucfirst($secciones[$_GET["q"]]["t"])." (".htmlentities($q).")";
+				echo $str[$lang]["nocargado"].ucfirst($secciones[$_GET["q"]]["t"])." ($q)";
 			}
 			$tabla=$secciones[$_GET["q"]]["db"];
 			$dep_table = $secciones[$_GET["dep_table"]]["db"];

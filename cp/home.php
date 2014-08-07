@@ -39,7 +39,6 @@ foreach($secciones as $key => $val){
 <hr />
 <div class="column small-12">
 	<h2 id="joy_contenido_permisos"><?=$inline[$lang]["permisos"]?></h2>
-    <p><?=str_replace("[:x:]",$_SESSION["mypermisos"],$inline[$lang]["permisosBajadas"])?></p>
 </div>
 	<?
 	foreach($secciones as $key => $val){

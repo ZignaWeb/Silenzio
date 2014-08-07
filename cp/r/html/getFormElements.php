@@ -10,13 +10,13 @@
 				
 				if (isset($val["val"]) && $val["val"]=="date"){
 					$clase.=" date";
-					$titulo.=" <span style='font-size:12px'>$fDateTxt</span>";
+					$titulo.=" <span style='font-size:12px'>YYYY-MM-DD</span>";
 					}else{
 					$clasetime="";
 				}
 				if (isset($val["val"]) && $val["val"]=="datetime"){
 					$clase.=" datetime";
-					$titulo.=" <span style='font-size:12px'>$fDateTimeTxt</span>";
+					$titulo.=" <span style='font-size:12px'>YYYY-MM-DD HH:MM:SS</span>";
 					}else{
 					$clasetime="";
 				}
@@ -45,9 +45,7 @@
 						echo "<input class='$clase' type='password' placeholder='".$palceholder."' name='".$val["db"]."' value='$valor'/>";
 					}elseif ($val["type"]=="textarea"){
 						echo "<div class='rtfbox' id='".$val["db"]."'>";
-						if (!isset($val["rtf"]) || $val["rtf"] != "no") {
-							include ("r/html/rtfbuttons.php");
-						}
+						include ("r/html/rtfbuttons.php");
 						echo "<textarea class='$clase' rows='5' placeholder='".$palceholder."' name='".$val["db"]."'>$valor</textarea>
 						<script type='text/javascript'>richTextualize('#".$val["db"]."');</script>
 					</div>";

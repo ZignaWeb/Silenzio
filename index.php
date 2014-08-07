@@ -3,11 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Silenzio</title>
-<link href="r/css2.css?v=4" rel="stylesheet" type="text/css" />
-<link rel="shortcut icon" href="" />
+<link href="r/css2.css?v=1" rel="stylesheet" type="text/css" />
 <script src="r/c/jq.js" type="text/javascript"></script>
 <script type="text/javascript" src="r/c/local.js"></script>
-<link rel="icon" href="data:;base64,=">
 </head>
 
 <body>
@@ -58,16 +56,16 @@
 <div id="videoplayer"></div>
 <div id="favplayer"></div>
 <div id="formplayer">
-	<iframe src='http://www.zigna.com.ar/remotes/silenzio/home_form_silenzio.php'></iframe>
+	<iframe src='r/html/Form.php'></iframe>
     <a class="cerrar" href="#">cerrar [ x ]</a>
 </div>
 
 <a id="afip" class="right" href="https://servicios1.afip.gov.ar/clavefiscal/qr/mobilePublicInfo.aspx?req=e1ttZXRob2Q9Z2V0UHVibGljSW5mb11bcGVyc29uYT0zMzUwMTk4MzcxOV1bdGlwb2RvbWljaWxpbz0wXVtzZWN1ZW5jaWE9MF1bdXJsPWh0dHA6Ly93d3cuc2lsZW56aW8uY29tLmFyXX0=" target="_F960AFIPInfo"><img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0" width="44" height="60"></a>
 <script type="text/javascript">
 	// load js functions
-	$(document).ready(function () {		
+	$(document).ready(function () {
 								
-		setTimeout(function(){$("#formplayer").fadeIn();},1000);
+		checkCookie();
 		slider("#showbox");
 		
 		$("#footSlide h2").click(function(event){
@@ -106,7 +104,7 @@
 				current=c%n;
 				if(current<n-1){next=current+1;}else{next=0;}
 				
-				$(id + " .view .current").animate({width:0},5000,function(){
+				$(id + " .view .current").animate({width:0},1000,function(){
 					$(id + " .view .current").detach();
 					$(id + " .view div.next").attr("class","current").css('background-image', 'url(' + imgs[current] + ')');
 					$(id + " .view").append('<div class="next"></div>');
@@ -116,7 +114,6 @@
 			},delay);
 		}
 	});
-
 </script>
 <script type="text/javascript">
   var _gaq = _gaq || [];

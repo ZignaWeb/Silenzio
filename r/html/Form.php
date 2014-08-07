@@ -20,6 +20,27 @@
         </form>
 
     </div>
-     
+      <!--<script type="text/javascript">
+	$(".validar").change(function(){
+		fromValidator (this);
+	});
+	$("#mensaje").click(function(){
+		$(this).fadeOut();
+	});
+	$('#sendMail').submit(function(event) {
+	  event.preventDefault();
+	  
+	  var url = $(this).attr('action');
+	  var datos = $(this).serialize();
+	  
+	  $.post(url, datos, function(resultado) {
+		$('#mensaje').html(resultado);
+		$("#mensaje").fadeIn();
+		if ($("#mensaje").text().search("Gracias por contactarnos")!=-1) {
+			$('#sendMail').fadeOut();
+		}
+	  });  
+	});
+	</script>-->
 </body>
 </html>

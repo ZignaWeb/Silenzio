@@ -1,4 +1,6 @@
 <?
+ini_set('error_reporting', E_ALL);
+// echo 'Current PHP version: ' . phpversion();
 include("r/main.php");
 $embed=1;
 ?>
@@ -7,11 +9,6 @@ $embed=1;
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?
-if ($error_reporting=="1") {
-	ini_set('error_reporting', E_ALL);
-	echo 'Current PHP version: ' . phpversion();
-}
-
 $title=$site_name;
 if (isset($_GET["a"])) {
 	$title.=" ".$secciones[$_GET["q"]]["a"][$_GET["a"]]["t"];
@@ -52,7 +49,7 @@ if (isset($_GET["q"])) {
 				include(htmlentities($_GET["a"]).'.php');
 			}else{
 				$embed=0;
-				echo "<div class='alert-box warning'>".str_replace("[:x:]",ucfirst($_SESSION["myusername"]),$error[$lang]["credenciales"])." ".$secciones[$_GET["q"]]["p"]."<a href='#' class='close'>&times;</a></div>";
+				echo "<div class='cuadro'>".str_replace("[:x:]",ucfirst($_SESSION["myusername"]),$error[$lang]["credenciales"])."</div>";
 			}
 		}elseif(isset($_GET["q"]) && !isset($_GET["a"])){
 			include(htmlentities($_GET["q"]).'.php');

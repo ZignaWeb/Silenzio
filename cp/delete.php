@@ -24,7 +24,7 @@
 			global $inline;
 			$q="DELETE FROM `".$table."` WHERE `id`='".$idregistro."'";
 			if (mysql_query($q)){
-				logIntoHistory($ahora,$_SESSION["myuserid"],$inline[$lang]["delete"].": ".$secciones[$que]["t"],$q);
+				logIntoHistory($ahora,$_SESSION["myuserid"],$inline["delete"].": ".$secciones[$que]["t"],$q);
 				// time / quien / accion / codigo
 				return true;
 			}else{

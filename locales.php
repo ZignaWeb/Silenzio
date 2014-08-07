@@ -57,7 +57,7 @@
                                 if ($ld["lugar"]!=NULL) {
 									echo '<h3 id="l'.$ld["id"].'">'.$ld["lugar"].'</h3><p>'.$ld["direccion"].'<br/>'.$ld["telefono"].'</p>';
 								}else{
-									echo '<h3 id="l'.$ld["id"].'">'.$ld["direccion"].'</h3><p>'.$ld["telefono"].'</p>';
+									echo '<h3 id="l'.$ld["id"].'">'.$ld["direccion"].'</h3>';
 								}
 								echo '<script type="text/javascript">
 									m['.$ld["id"].']=\''.$ld["googleMaps"].'\';
@@ -79,7 +79,7 @@
 									if ($ld["lugar"]!=NULL) {
 										echo '<h3 id="l'.$ld["id"].'">'.$ld["lugar"].'</h3><p>'.$ld["direccion"].'<br/>'.$ld["telefono"].'</p>';
 									}else{
-										echo '<h3 id="l'.$ld["id"].'">'.$ld["direccion"].'</h3><p>'.$ld["telefono"].'</p>';
+										echo '<h3 id="l'.$ld["id"].'">'.$ld["direccion"].'</h3>';
 									}
 									echo '<script type="text/javascript">
 										m['.$ld["id"].']=\''.$ld["googleMaps"].'\';
@@ -103,7 +103,7 @@
 									if ($ld["lugar"]!=NULL) {
 										echo '<h3 id="l'.$ld["id"].'">'.$ld["lugar"].'</h3><p>'.$ld["direccion"].'<br/>'.$ld["telefono"].'</p>';
 									}else{
-										echo '<h3 id="l'.$ld["id"].'">'.$ld["direccion"].'</h3><p>'.$ld["telefono"].'</p>';
+										echo '<h3 id="l'.$ld["id"].'">'.$ld["direccion"].'</h3>';
 									}
 									echo '<script type="text/javascript">
 										m['.$ld["id"].']=\''.$ld["googleMaps"].'\';
@@ -125,7 +125,7 @@
 									if ($ld["lugar"]!=NULL) {
 										echo '<h3 id="l'.$ld["id"].'">'.$ld["lugar"].'</h3><p>'.$ld["direccion"].'<br/>'.$ld["telefono"].'</p>';
 									}else{
-										echo '<h3 id="l'.$ld["id"].'">'.$ld["direccion"].'</h3><p>'.$ld["telefono"].'</p>';
+										echo '<h3 id="l'.$ld["id"].'">'.$ld["direccion"].'</h3>';
 									}
 									echo '<script type="text/javascript">
 										m['.$ld["id"].']=\''.$ld["googleMaps"].'\';

@@ -1,15 +1,9 @@
-
-	
-
-
 $(document).ready(function(){
 	
 	postSubmenu();
-	offsetimg ();
 		
 	$(window).resize(function(){
 		postSubmenu();
-		offsetimg ();
 	})
 	
 	function postSubmenu () {
@@ -17,14 +11,6 @@ $(document).ready(function(){
 		var Hheader= $("#header").height()-offset ;
 		$("#header .submenu").css("padding-top",Hheader);
 	}
-	
-		function offsetimg () {
-		var altp = $("#container > div > div > div:nth-child(4) > div > p:nth-child(1)").height();
-		var alta =  $("#container > div > div > div:nth-child(4) > div:nth-child(1) > a:nth-child(4)").height();
-		var padding = altp+ alta;
-		$("##container > div > div > div:nth-child(4) > div:nth-child(2) > img").css("padding-top",padding);
-	}
-
 	
 	var videoIframe = '<iframe src="//player.vimeo.com/video/86903941" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>';
 	var videotxt = videoIframe+'<a class="cerrar" href="#">[ x ] cerrar</a>';
@@ -152,7 +138,7 @@ function loadImg (alt, src, id){
 function setCookie(cname,cvalue,exdays)
 {
 var d = new Date();
-d.setTime(d.getTime()+(exdays*60*1000));
+d.setTime(d.getTime()+(exdays*24*60*60*1000));
 var expires = "expires="+d.toGMTString();
 document.cookie = cname+"="+cvalue+"; "+expires;
 }
@@ -173,6 +159,6 @@ function checkCookie() {
 	var user=getCookie("visit");
 	if (user==""){
 		setTimeout(function(){$("#formplayer").fadeIn();},1000);
-		setCookie("visit",1,15);
+		setCookie("visit",1,7);
 	}
 }

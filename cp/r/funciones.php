@@ -287,7 +287,7 @@ function query_to_csv ($db_conn, $query, $filename, $attachment = false, $header
 function errorPrint ($e) {
 	global $error;
 	echo '<div data-alert class="alert-box warning medium-6 medium-offset-3 small-8 small-offset-2">
-	  '.$error[$e].'
+	  '.$error[$lang][$e].'
 	  <a href="#" class="close">&times;</a> 
 	</div>';
 }

@@ -116,9 +116,9 @@
 						if ($val["type"]=="select") {$rd[$val["db"]]=$val["options"][$rd[$val["db"]]];}
 						if ($val["type"]=="img"){
 							if ($rd["type"]=="img"){
-								$rd[$val["db"]]="<img class='list_thumb th center' src='".$dir["imgs"]."/thumb/".$rd[$val["db"]]."' />";
+								$rd[$val["db"]]="<img class='list_thumb th center' src='data/uploads/thumb/".$rd[$val["db"]]."' />";
 							}else{
-								$rd[$val["db"]]="<a href='".$dir["imgs"]."/files/".$rd["url"]."' target='_blank'><img class='list_thumb th center' src='http://placehold.it/200x200&text=DOCUMENT' /></a>";
+								$rd[$val["db"]]="<a href='data/uploads/files/".$rd["url"]."' target='_blank'><img class='list_thumb th center' src='http://placehold.it/200x200&text=DOCUMENT' /></a>";
 							}
 						}
 						if (isset($val["get"])){
@@ -194,8 +194,8 @@
 				$url=substr($url,0,$strpos);
 			}
 		$pn=ceil($rng/$xpag);
-		if ($p==1)   {$arrowa="unavailable";$linka="#";}else{$arrowa=""; $linka=$url.'&p='.($p-1);}
-		if ($p==$pn) {$arrowb="unavailable";$linkb="#";}else{$arrowb=""; $linkb=$url.'&p='.($p+1);}
+		if ($p==1)   {$arrowa="unavailable";$linka="#";}else{$linka=$url.'&p='.($p-1);}
+		if ($p==$pn) {$arrowb="unavailable";$linkb="#";}else{$linkb=$url.'&p='.($p+1);}
 		
 		echo '<li class="arrow '.$arrowa.'"><a href="'.$url.'&p=1">&laquo;</a></li>
 		<li class="arrow '.$arrowa.'"><a href="'.$linka.'">&lsaquo;</a></li>';
