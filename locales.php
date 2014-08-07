@@ -23,7 +23,7 @@
     <div class="row">
     	<div id="content" class="cell">
         	<?
-			$dbh = mysql_connect ("MYSQL.silenzio.com.ar", "silenzio", "silen123") or die ('I cannot connect to the database because: ' . mysql_error()); mysql_select_db ("web");
+			include ("cp/r/sql.php");
 			?>
             <script type="text/javascript">
 				var m = new Array(), i = new Array();

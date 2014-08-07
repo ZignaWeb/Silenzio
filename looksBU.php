@@ -25,7 +25,7 @@
     <div class="row">
     	<div id="content" class="cell" >
         	<?
-			$dbh = mysql_connect ("MYSQL.silenzio.com.ar", "silenzio", "silen123") or die ('I cannot connect to the database because: ' . mysql_error()); mysql_select_db ("web");
+			include ("cp/r/sql.php");
 			$lq=mysql_query("SELECT * FROM `look` WHERE 1 ORDER BY `lookid` ASC");
 			$i=0;
 			while($ld[$i]=mysql_fetch_assoc($lq)){$i++;}

@@ -24,7 +24,7 @@
     <div class="row">
     	<div id="content" class="cell" >
         	<?
-			$dbh = mysql_connect ("MYSQL.silenzio.com.ar", "silenzio", "silen123") or die ('I cannot connect to the database because: ' . mysql_error()); mysql_select_db ("web");
+			include ("cp/r/sql.php");
 			
 			$cq=mysql_query("SELECT `ag_categoria`.`nombre`, `ag_categoria`.`id` FROM `ag_categoria`,`ag_prenda` WHERE `ag_categoria`.`id`=`ag_prenda`.`categoria` GROUP BY `ag_prenda`.`categoria` ORDER BY `ag_categoria`.`nombre` ASC");
 

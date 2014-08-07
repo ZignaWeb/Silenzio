@@ -20,8 +20,7 @@
                 	
 					<? 
 					include ("r/html/header.php");
-					
-					$dbh = mysql_connect ("MYSQL.silenzio.com.ar", "silenzio", "silen123") or die ('I cannot connect to the database because: ' . mysql_error()); mysql_select_db ("web");
+					include ("cp/r/sql.php");
 					$lq=mysql_query("SELECT * FROM `ag_media` WHERE `dep_table`='cmp' AND `dep_id`='1' AND `mostrar`='1' ORDER BY `id` ASC");
 					$i=0;
 					while ($ld[$i]=mysql_fetch_assoc($lq)) {$i++;}
