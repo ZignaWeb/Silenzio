@@ -24,7 +24,7 @@
     <div class="row">
     	<div id="content" class="cell">
         	<?
-			include ("cp/r/sql.php");
+			$dbh = mysql_connect ("MYSQL.silenzio.com.ar", "silenzio", "silen123") or die ('I cannot connect to the database because: ' . mysql_error()); mysql_select_db ("web");
 			$date =date("Y-m-d");
 			$lq=mysql_query("SELECT * FROM `ag_promo` WHERE `inicio`<='$date' AND `fin`>='$date' AND `mostrar`='1' ORDER BY `id` ASC");
 			$i=0;
