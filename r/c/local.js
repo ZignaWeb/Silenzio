@@ -28,8 +28,23 @@ $(document).ready(function(){
 	});
 	$(document).on("click", "#formplayer a.cerrar", function(event){
 		event.preventDefault();
-		$("#formplayer").fadeOut("slow", function(){$(this).empty();});						
+		$("#formplayer").fadeOut("slow", function(){$(this).empty();});
+		$("#cover").css("opacity","0");
+		setTimeout(function(){
+			$("#cover").css("display","none");
+		},2000);									
 	});
+	$(document).mouseup(function (e)
+	{
+		if (!$("#formplayer").is(e.target) && $("#formplayer").has(e.target).length === 0)
+		{
+			$("#formplayer").fadeOut("slow", function(){$(this).empty();});
+			$("#cover").css("opacity","0");
+			setTimeout(function(){
+				$("#cover").css("display","none");
+			},500);
+    }
+});
 });
 
 function refreshit() {

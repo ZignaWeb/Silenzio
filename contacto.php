@@ -11,34 +11,31 @@
 
 <body>
 <div id="mainBox" class="table">
-	<div class="row">
-    	<div id="header" class="cell">
-        	<div class="table">
-            	<div class="row">
+	<a href="index.php"><img id="logo" src="r/i/logodark.png" /></a>
+	<div id="navigation">
                 	<? include ("r/html/header.php"); 
 					include ("cp/r/sql.php");
 					$lq=mysql_query("SELECT * FROM `ag_media` WHERE `dep_table`='cmp' AND `dep_id`='1' AND `mostrar`='1' ORDER BY `id` ASC LIMIT 1");
 					$i=0;
 					$ld=mysql_fetch_assoc($lq);
 					?>
-                    
-                </div>
-            </div>       
-        </div>
     </div>
     <div class="row">
     	<div id="content" class="cell">
         	<div id="showbox">
-                <div class="view"><div class="current" style="background:url(http://silenzio.com.ar/cp/uploads/slide/<?=$ld["url"]?>);background-size:cover;">
-            </div>
-            <div class="form">
-                <iframe src="http://www.zigna.com.ar/remotes/silenzio/mail_selenzio.php"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
+                <div class="view">
+					<div class="current" style="background:url(http://silenzio.com.ar/cp/uploads/slide/<?=$ld["url"]?>);background-size:cover;">
+					</div>
+					<div class="form">
+					<iframe src="http://www.zigna.com.ar/remotes/silenzio/mail_selenzio.php"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <a id="afip" class="left cell" href="https://servicios1.afip.gov.ar/clavefiscal/qr/mobilePublicInfo.aspx?req=e1ttZXRob2Q9Z2V0UHVibGljSW5mb11bcGVyc29uYT0zMzUwMTk4MzcxOV1bdGlwb2RvbWljaWxpbz0wXVtzZWN1ZW5jaWE9MF1bdXJsPWh0dHA6Ly93d3cuc2lsZW56aW8uY29tLmFyXX0=" target="_F960AFIPInfo"><img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0" width="44" height="60"></a>
 <div id="videoplayer"></div>
+</div>
 
 <script type="text/javascript">
 

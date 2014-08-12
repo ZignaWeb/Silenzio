@@ -12,15 +12,10 @@
 <body id="lookbook" class="mayoristas">
   
 <div id="mainBox" class="table">
-	<div class="row">
-    	<div id="header" class="cell">
-        	<div class="table">
-            	<div class="row">
-                	<? include ("r/html/header.php")?>
-                </div>
-            </div>       
-        </div>
-    </div>
+	<a href="index.php"><img id="logo" src="r/i/logodark.png" /></a>
+	<div id="navigation">
+    	<? include ("r/html/header.php")?>
+    </div> 
     <div class="row">
     	<div id="content" class="cell" >
         	<?

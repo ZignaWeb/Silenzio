@@ -11,15 +11,10 @@
 <body id="locales">
   
 <div id="mainBox" class="table">
-	<div class="row">
-    	<div id="header" class="cell">
-        	<div class="table">
-            	<div class="row">
-                	<? include ("r/html/header.php")?>
-                </div>
-            </div>       
-        </div>
-    </div>
+	<a href="index.php"><img id="logo" src="r/i/logodark.png" /></a>
+	<div id="navigation">
+    	<? include ("r/html/header.php")?>
+    </div> 
     <div class="row">
     	<div id="content" class="cell">
         	<?
@@ -28,15 +23,8 @@
             <script type="text/javascript">
 				var m = new Array(), i = new Array();
 			</script>
-        	<div id="madiaHold" class="table">
-            	<div id="img" class="row">
-                	<div id="imgHold" class="cell" style="background:url(http://silenzio.com.ar/nueva/include/img/content/loc/img1378152564.jpeg); background-size:cover"></div>
-                </div>
-                <div id="map" class="row">
-                	<div id="mapHold" class="cell">
-                		<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.ar/maps?f=q&source=s_q&hl=es-419&geocode=&q=Avenida+V%C3%A9lez+Sarsfield+361,+C%C3%B3rdoba&aq=0&oq=Av.+Velez+Sarsfield+361&sll=-31.398755,-64.186859&sspn=0.338177,0.676346&ie=UTF8&hq=&hnear=Av+V%C3%A9lez+Sarsfield+361,+C%C3%B3rdoba&t=m&z=14&ll=-31.419463,-64.188813&output=embed"></iframe><br /><small><a href="https://maps.google.com.ar/maps?f=q&source=embed&hl=es-419&geocode=&q=Avenida+V%C3%A9lez+Sarsfield+361,+C%C3%B3rdoba&aq=0&oq=Av.+Velez+Sarsfield+361&sll=-31.398755,-64.186859&sspn=0.338177,0.676346&ie=UTF8&hq=&hnear=Av+V%C3%A9lez+Sarsfield+361,+C%C3%B3rdoba&t=m&z=14&ll=-31.419463,-64.188813" style="color:#0000FF;text-align:left">Ver mapa más grande</a></small>
-                    </div>
-                </div>
+        	<div id="madiaHold" style="background:url(http://silenzio.com.ar/nueva/include/img/content/loc/img1378152564.jpeg); background-size:cover" class="table">
+                
                 <div class="row afip" style="height:70px; position:relative">
                 	<a id="afip" class="left cell" href="https://servicios1.afip.gov.ar/clavefiscal/qr/mobilePublicInfo.aspx?req=e1ttZXRob2Q9Z2V0UHVibGljSW5mb11bcGVyc29uYT0zMzUwMTk4MzcxOV1bdGlwb2RvbWljaWxpbz0wXVtzZWN1ZW5jaWE9MF1bdXJsPWh0dHA6Ly93d3cuc2lsZW56aW8uY29tLmFyXX0=" target="_F960AFIPInfo"><img src="http://www.afip.gob.ar/images/f960/DATAWEB.jpg" border="0" width="44" height="60"></a>
                 </div>
@@ -153,7 +141,7 @@ $(document).ready(function(){
 		$(this).next("p").fadeIn();
 
 		$("#mapHold").html(m[id]);
-		$("#imgHold").attr("style","background-image:url('http://silenzio.com.ar/cp/uploads/box/"+i[id]+"'); background-size:cover");
+		$("#madiaHold").attr("style","background-image:url('http://silenzio.com.ar/cp/uploads/box/"+i[id]+"'); background-size:cover");
 	});
 });
 </script>

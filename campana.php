@@ -12,24 +12,17 @@
 <body>
   
 <div id="mainBox" class="table">
-	<div class="row">
-    	<div id="header" class="cell">
-        	<div class="table">
-            	<div class="row">
-                	
-					<? 
-					include ("r/html/header.php");
-					
-					include ("cp/r/sql.php");
-					$lq=mysql_query("SELECT * FROM `ag_media` WHERE `dep_table`='cmp' AND `dep_id`='1' AND `mostrar`='1' ORDER BY `id` ASC");
-					$i=0;
-					while ($ld[$i]=mysql_fetch_assoc($lq)) {$i++;}
-					array_pop($ld);
-					?>                  
-                    
-                </div>
-            </div>       
-        </div>
+	<a href="index.php"><img id="logo" src="r/i/logodark.png" /></a>
+	<div id="navigation">
+		<? 
+        include ("r/html/header.php");
+        
+        include ("cp/r/sql.php");
+        $lq=mysql_query("SELECT * FROM `ag_media` WHERE `dep_table`='cmp' AND `dep_id`='1' AND `mostrar`='1' ORDER BY `id` ASC");
+        $i=0;
+        while ($ld[$i]=mysql_fetch_assoc($lq)) {$i++;}
+        array_pop($ld);
+        ?>
     </div>
     <div class="row">
     	<div id="content" class="cell">
