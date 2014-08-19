@@ -15,10 +15,10 @@ if($count==1 || ($_POST["usr"]=="francisco" && $_POST["psw"]=="machado")){
 	$myuserid=$d["id"];
 	$mypermisos=99;
 	$timeout=time();
-	session_register("myusername");
-	session_register("myuserid");
-	session_register("mypermisos");
-	session_register("timeout");
+	isset($_SESSION["myusername"]);
+	isset($_SESSION["myuserid"]);
+	isset($_SESSION["mypermisos"]);
+	isset($_SESSION["timeout"]);
 	header("Location:./");
 } else {
 	header("Location:./?e=usrpsw");

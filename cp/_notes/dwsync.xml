@@ -24,4 +24,6 @@
 <file name="logincheck.php" server="ftp.silenzio.com.ar/wwwroot/" local="130373265656708000" remote="130373265600000000" Dst="0" />
 <file name="logout.php" server="ftp.silenzio.com.ar/wwwroot/" local="130372262920530000" remote="130373123400000000" Dst="0" />
 <file name="setup.php" server="ftp.silenzio.com.ar/wwwroot/" local="130372491421796000" remote="130373124600000000" Dst="0" />
+<file name="index.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130529453096515000" remote="130529417400000000" Dst="0" />
+<file name="logincheck.php" server="zigna.com.ar/public_html/preview/silenzioMarket/" local="130529457887075000" remote="130529421600000000" Dst="0" />
 </dwsync>

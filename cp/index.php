@@ -41,7 +41,7 @@ if (isset($_GET["q"])) {
 		errorPrint($safeE);
 	}
 
-	if(session_is_registered("myusername") && session_is_registered("mypermisos")){
+	if (isset($_SESSION["myusername"]) && isset($_SESSION["mypermisos"])){
 		
 		include ("r/html/menu.php");
 		if (isset($_GET["a"]) && isset($_GET["q"])) {
